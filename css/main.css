@@ -5,6 +5,10 @@ body {
     word-break: keep-all;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Header */
 header {
     background-color: #3a3a3a;
@@ -21,11 +25,12 @@ header .inner ul.menu {
     justify-content: space-between;
 }
 
-header .inner ul.menu li {
+header .inner ul.menu>li {
     display: flex;
+    position: relative;
 }
 
-header .inner ul.menu li a {
+header .inner ul.menu>li>a {
     font-size: 11px;
     padding: 0 10px;
     display: flex;
@@ -35,27 +40,97 @@ header .inner ul.menu li a {
     opacity: .8;
 }
 
-header .inner ul.menu li.apple-logo a,
-header .inner ul.menu li.search-starter a,
-header .inner ul.menu li.basket-starter a {
+header .inner ul.menu>li.apple-logo>a,
+header .inner ul.menu>li.search-starter>a,
+header .inner ul.menu>li.basket-starter>a {
     text-indent: -9999px;
     background-repeat: no-repeat;
     background-position: center 13px;
     width: 14px;
 }
 
-header .inner ul.menu li.apple-logo a {
+header .inner ul.menu>li.apple-logo>a {
     background-image: url("../images/header_apple.svg");
 }
 
-header .inner ul.menu li.basket-starter a {
+header .inner ul.menu>li.basket-starter>a {
     background-image: url("../images/header_bag.svg");
 }
 
-header .inner ul.menu li.search-starter a {
+header .inner ul.menu>li.search-starter>a {
     background-image: url("../images/header_search.svg");
 }
 
-header .inner ul.menu li a:hover {
+header .inner ul.menu>li a:hover {
     opacity: 1;
+}
+
+/* Header / Menu / Basket */
+header .basket {
+    visibility: hidden;
+    width: 290px;
+    padding: 10px 20px;
+    border: 1px solid #d2d2d2;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: absolute;
+    top: calc(100% + 4px);
+    right: -6px;
+    transition: .4s;
+    opacity: 0;
+}
+
+header .basket.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+header .basket .arrow {
+    width: 20px;
+    height: 10px;
+    position: absolute;
+    top: -10px;
+    right: 12px;
+    overflow: hidden;
+}
+
+header .basket .arrow::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border: 1px solid #d2d2d2;
+    transform: rotate(45deg);
+    background-color: #fff;
+    transform-origin: 0 0;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+
+}
+
+header .basket .message {
+    padding: 30px 0;
+    font-size: 13px;
+    color: #6e6e6e;
+    text-align: center;
+}
+
+header .basket ul {
+    margin-top: 10px;
+}
+
+header .basket ul li {
+    border-top: 1px solid #d2d2d2;
+}
+
+header .basket ul li a {
+    display: block;
+    padding: 14px;
+    font-size: 13px;
+    color: #0071e3;
+}
+
+header .basket ul li a:hover {
+    text-decoration: underline;
 }
