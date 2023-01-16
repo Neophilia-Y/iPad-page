@@ -4,3 +4,58 @@ body {
     font-family: "Roboto", "Noto Sans KR", sans-serif;
     word-break: keep-all;
 }
+
+/* Header */
+header {
+    background-color: #3a3a3a;
+}
+
+header .inner {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+header .inner ul.menu {
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .inner ul.menu li {
+    display: flex;
+}
+
+header .inner ul.menu li a {
+    font-size: 11px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    color: #f5f5f5;
+    text-decoration: none;
+    opacity: .8;
+}
+
+header .inner ul.menu li.apple-logo a,
+header .inner ul.menu li.search-starter a,
+header .inner ul.menu li.basket-starter a {
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-position: center 13px;
+    width: 14px;
+}
+
+header .inner ul.menu li.apple-logo a {
+    background-image: url("../images/header_apple.svg");
+}
+
+header .inner ul.menu li.basket-starter a {
+    background-image: url("../images/header_bag.svg");
+}
+
+header .inner ul.menu li.search-starter a {
+    background-image: url("../images/header_search.svg");
+}
+
+header .inner ul.menu li a:hover {
+    opacity: 1;
+}
