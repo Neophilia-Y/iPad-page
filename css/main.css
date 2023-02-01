@@ -17,9 +17,21 @@ a {
     color: #1d1d1d;
 }
 
+p {
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Inner */
 .inner {
-    max-width: 1080px;
+    max-width: 980px;
     margin: 0 auto;
+    padding: 0 20px;
     position: relative;
 }
 
@@ -47,9 +59,59 @@ a {
     box-shadow: 0 0 0 4px #8189f1;
 }
 
+/* Links */
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+a.link {
+    color: #0071e3;
+    font-size: 19px;
+    line-height: 1.3;
+}
+
+a.link:hover {
+    text-decoration: underline;
+}
+
+a.link::after {
+    content: " >";
+}
+
+/* Background image text */
+.bgtext {
+    display: block;
+    text-indent: -9999px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Figure */
+.figures {
+    position: relative;
+}
+
+.figures figure,
+.figures figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.figures figcaption * {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 /* Header */
 header {
     background-color: #3a3a3a;
+    position: relative;
+    z-index: 9;
 }
 
 header .inner ul.menu {
@@ -347,5 +409,76 @@ nav ul li:first-child {
 
 nav ul li:not(:first-child):hover {
     color: #0071e3;
+}
 
+.hero {
+    background-color: #f5f5f5;
+}
+
+.hero .inner {
+    padding-bottom: 110px;
+}
+
+.hero h1 {
+    width: 221px;
+    height: 91px;
+    background-image: url("../images/hero_ipad_text.png");
+    position: absolute;
+    transform: translate(624px, 235px);
+    z-index: 1;
+}
+
+.hero .figures {
+    height: 808px;
+}
+
+.hero figure {
+    transform: translate(74px, -64px);
+}
+
+.hero figure figcaption .caption-camera {
+    transform: translate(43px, 580px);
+    background-image: url("../images/hero_ipad_caption_camera.png");
+    width: 120px;
+    height: 84px;
+}
+
+.hero figure figcaption .caption-chip {
+    transform: translate(589px, 510px);
+    width: 95px;
+    height: 43px;
+    background-image: url(../images/hero_ipad_caption_chip.png);
+}
+
+.hero figure figcaption .caption-storage {
+    transform: translate(627px, 631px);
+    background-image: url("../images/hero_ipad_caption_storage.png");
+    width: 80px;
+    height: 43px;
+}
+
+.hero h2 {
+    background: url("../images/hero_headline.png");
+    width: 738px;
+    height: 145px;
+    margin: 0 auto;
+
+}
+
+.hero p.pricing {
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.hero p.description {
+    width: 88%;
+    text-align: center;
+    margin: 18px auto 0;
+    font-size: 19px;
+}
+
+.hero .links {
+    margin-top: 30px;
 }
