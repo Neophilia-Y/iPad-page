@@ -107,6 +107,7 @@ a.link::after {
 /* Figure */
 .figures {
     position: relative;
+    flex-grow: 1;
 }
 
 .figures figure,
@@ -665,6 +666,7 @@ nav ul li:not(:first-child):hover {
 
 .power .arcade .figures {
     height: 600px;
+
 }
 
 .power .arcade figure {
@@ -702,7 +704,6 @@ nav ul li:not(:first-child):hover {
 
 @keyframes sprite-icon {
 
-    /* 1~10 */
     0.00% {
         background-position: 0 0;
     }
