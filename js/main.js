@@ -63,3 +63,36 @@ const infoEls = document.querySelectorAll(".infos .info");
 infoEls.forEach(el => {
     io.observe(el)
 })
+
+// let x = 0, y = 0;
+// let position = ""
+// for (let i = 0; i < 60; i++) {
+//     position = `background-position: ${x}px ${y}px`;
+//     if (x >= 600) {
+//         x = 0
+//         y += 100
+//         continue;
+//     }
+//     x += 100
+// }
+
+// 비디오 재생!
+const video = document.querySelector('.stage video')
+const playBtn = document.querySelector('.stage .controller--play')
+const pauseBtn = document.querySelector('.stage .controller--pause')
+
+// Google 자동 재생 정책 확인! - https://developer.chrome.com/blog/autoplay/#audiovideo-elements
+// video.play()
+//   .then(played)
+//   .catch(paused)
+
+playBtn.addEventListener('click', () => {
+    video.play()
+    playBtn.classList.add('hide')
+    pauseBtn.classList.remove('hide')
+})
+pauseBtn.addEventListener('click', () => {
+    video.pause()
+    playBtn.classList.remove('hide')
+    pauseBtn.classList.add('hide')
+})
