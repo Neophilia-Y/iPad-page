@@ -1,3 +1,5 @@
+import ipads from "../data/ipads.js";
+
 //Basket
 const basketStarterEl = document.querySelector("header .basket-starter");
 const basketEl = basketStarterEl.querySelector(".basket");
@@ -36,6 +38,7 @@ const showSearch = () => {
         inputEl.focus();
     }, 600)
 }
+
 const hideSearch = () => {
     header.classList.remove("searching");
     document.documentElement.classList.remove("fixed");
@@ -96,3 +99,29 @@ pauseBtn.addEventListener('click', () => {
     playBtn.classList.remove('hide')
     pauseBtn.classList.add('hide')
 })
+
+// Price section data
+const priceContainer = document.querySelector(".price .price-list");
+let priceItems = "";
+ipads.forEach((item) => {
+    let colors = "";
+    item.colors.forEach((color) => {
+        colors += `<div class="color" style="background-color:${color}"></div>`
+    })
+    priceItems += `
+        <li class="price-item">
+            <img src=${item.thumbnail} />
+            <div class="colors"> 
+                ${colors}
+            </div>
+            <h2>${item.name}</h2>
+            <p>${item.tagline}</p>
+            <div class="amount">₩${item.price.toLocaleString("en-US")}</div>
+            <a class="link href="${item.url}" target="_blank">More</a>
+            <hr/>
+        </li >
+
+    `;
+})
+priceContainer.innerHTML = priceItems;
+

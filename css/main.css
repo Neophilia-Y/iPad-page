@@ -880,6 +880,7 @@ nav ul li:not(:first-child):hover {
     transform: translate(-205px, -312px);
 }
 
+
 .ipados .figure-split-view figcaption {
     width: 163px;
     height: 53px;
@@ -990,6 +991,87 @@ nav ul li:not(:first-child):hover {
     background-image: url("../images/apps_goodnotes_caption.png");
     transform: translate(24px, 690px);
 }
+
+/* AR */
+.ar {
+    margin-top: 80px;
+    padding: 30px 0;
+    background-color: var(--color-font-lightgray);
+}
+
+.ar .whitebox {
+    padding-bottom: 0;
+}
+
+.ar .inner {
+    display: flex;
+}
+
+.ar .inner>div {
+    width: 380px;
+    margin: auto;
+}
+
+.ar .inner .icon {
+    background-image: url("../images/ar_icon.png");
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+}
+
+.price {
+    padding: 30px 0;
+    background-color: var(--color-font-lightgray);
+}
+
+.price .inner {
+    text-align: center;
+}
+
+.price .price-list {
+    width: 900px;
+    height: 500px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+
+}
+
+.price .price-list li {
+    margin: 0 auto;
+    width: 200px;
+
+}
+
+.price .price-list li img {
+    margin: 0 auto;
+}
+
+.price .price-list li .colors {
+    margin: 20px 0;
+    height: 50px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.price .price-list li .color {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.price .price-list li h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.price .price-list li a {
+    margin-bottom: 40px;
+}
+
+
 
 
 @keyframes sprite-icon {
